@@ -1,1 +1,61 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+icon: src/assets/logo.png
+micros:
+  - name: main
+    src: .
+    engine: python3.9
+    primary: true
+    include: 
+    - src/micros/main.py
+    - src/actions
+    - src/utils
+    run: uvicorn src.micros.main:app --log-level warning
+    dev: uvicorn src.micros.main:app
+    presets:
+      env:
+      - name: PRESENCE_LOG_WEBHOOK_URL
+        description: Discord Webhook URL (for presence logs)
+        default: ''
+      - name: ERROR_LOG_WEBHOOK_URL
+        description: Discord Webhook URL (for presence error logs)
+        default: ''
+      - name: ALT_DETA_PROJECT_KEY
+        description: Alternative Deta Project Key (or uses default)
+        default: ''
+      - name: DISCORD_BOT_TOKEN
+        description: Discord Application/Bot Token
+    actions:
+      - id: 'presence'
+        name: 'Presence'
+        description: 'Gives the bot a status'
+        trigger: 'schedule'
+        default_interval: '* * * * *'
 
+  - name: bot
+    src: .
+    engine: python3.9
+    include: 
+    - src/micros/bot.py
+    - src/commands
+    - src/utils
+    run: uvicorn src.micros.bot:app --log-level warning
+    dev: uvicorn src.micros.bot:app
+    public_routes:
+      - '/interactions'
+    presets:
+      env:
+      - name: DISCORD_APPLICATION_ID
+        description: Discord Application's ID
+      - name: DISCORD_PUBLIC_KEY
+        description: Discord Application's Public Key
+      - name: DISCORD_BOT_TOKEN
+        description: Discord Application/Bot Token (duplicate)
+      - name: OPENAI_API_KEY
+        description: OpenAI's API Key
+      - name: ERROR_LOG_WEBHOOK_URL
+        description: Discord Webhook URL (for bot error logs)
+        default: ''
+      - name: CHATGPT_SYSTEM_MESSAGE
+        description: System Message (to give to ChatGPT)
+        default: "You are ChatGPT, a large language model trained by OpenAI, using GPT-3.5. Answer as concisely yet as informative as possible. Don't frequently say that you're an AI language model. Knowledge cutoff: 2021-09-01."
