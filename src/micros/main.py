@@ -32,6 +32,11 @@ async def middleware(request, call_next):
     await log_error(app.session, error)
     return Response('Internal server error', status_code = 500)
 
+# Root
+@app.get('/')
+async def root():
+  return 'There is no app here, this just runs the serverless bot behind-the-scenes. See the Discovery page for setting up!'
+
 # Actions handler
 @app.post('/__space/v0/actions')
 async def actions(request : Request):
