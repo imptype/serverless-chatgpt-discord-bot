@@ -18,6 +18,8 @@ You can also treat this repository as a template for making serverless bots with
 - A status message `Listening to /ask! | OpenAI` via scheduled actions.
 - And you can easily create and add more commands yourself!
 
+# --- Everything below is WIP ---
+
 ## Requirements
 - Deta Space account
 - Discord Application
@@ -40,7 +42,7 @@ You can also treat this repository as a template for making serverless bots with
 
 ### Running Online
 2 ways
-1. install on space app
+1. install on space app, see `Discovery.md` for now.
 2. push yourself
 
 ## Resources
