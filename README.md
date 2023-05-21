@@ -1,6 +1,6 @@
 # Information
-This Discord bot is **SERVERLESS** which means it can run for **FREE** and be **ALWAYS online** on Deta Space!  
-You can also treat this repository as a template for making serverless bots with the discohook library.
+This Discord bot is **SERVERLESS** which means it can run for **FREE** and be **ALWAYS online** on [Deta Space](https://deta.space)!  
+You can also treat this repository as a template for making serverless bots with the [discohook library](https://github.com/jnsougata/discohook).
 
 ## Table of Contents
 - [Information](#information)
