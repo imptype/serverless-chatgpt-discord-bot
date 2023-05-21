@@ -6,7 +6,7 @@ import deta # https://github.com/jnsougata/deta
 import discohook # https://github.com/jnsougata/deta
 
 activity_name = '/ask! | OpenAI'
-activity_type = 2 # listening to https://discord.com/developers/docs/topics/gateway-events#activity-object
+activity_type = 2 # listening to, https://discord.com/developers/docs/topics/gateway-events#activity-object
 status = 'online'
 
 token = os.getenv('DISCORD_BOT_TOKEN')
