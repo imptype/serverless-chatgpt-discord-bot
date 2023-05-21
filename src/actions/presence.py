@@ -25,7 +25,7 @@ handler.setFormatter(logging.Formatter(
   '%Y-%m-%d %H:%M:%S'
 ))
 logger.addHandler(handler)
-logger.setLevel(logging.DEBUG) # set to DEBUG to debug
+logger.setLevel(logging.INFO) # set to DEBUG to debug
 
 presence_payload = {
   'activities' : [{
