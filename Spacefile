@@ -11,7 +11,7 @@ micros:
     - src/actions
     - src/utils
     run: uvicorn src.micros.main:app --log-level warning
-    dev: uvicorn src.micros.main:app
+    dev: uvicorn src.micros.main:app --reload
     presets:
       env:
       - name: PRESENCE_LOG_WEBHOOK_URL
@@ -40,7 +40,7 @@ micros:
     - src/commands
     - src/utils
     run: uvicorn src.micros.bot:app --log-level warning
-    dev: uvicorn src.micros.bot:app
+    dev: uvicorn src.micros.bot:app --reload
     public_routes:
       - '/interactions'
     presets:
