@@ -6,6 +6,7 @@ You can also treat this repository as a template for making serverless bots with
 - [Information](#information)
 - [Table of Contents](#table-of-contents)
 - [Features](#features)
+- [File Structure](#file-structure)
 - [Requirements](#requirements)
 - [Running Online](#running-online)
 - [Running Locally](#running-locally)
@@ -16,6 +17,31 @@ You can also treat this repository as a template for making serverless bots with
 - `/ask <prompt> [model]` - a command that uses [OpenAI's API](https://openai.com/blog/openai-api) (ChatGPT).
 - A status message `Listening to /ask! | OpenAI` via [scheduled actions](https://deta.space/docs/en/basics/micros#scheduled-actions).
 - And you can easily create and add more commands yourself!
+
+## File Structure
+```
+.
+├─ src/                       # Source code
+│  ├─ actions/                # Files used for scheduled actions
+│  │  └─ presence.py          # Presence updater (bot status)
+│  ├─ assets/                 # All asset files
+│  │  └─ logo.png             # Logo used for space app
+│  ├─ commands/               # All command files
+│  │  ├─ ask.py               # Ask command
+│  │  └─ ping.py              # Ping command
+│  ├─ micros/                 # Micro files; each file is a micro
+│  │  ├─ bot.py               # /bot route, contains the discohook bot
+│  │  └─ main.py              # / route, contains the actions handler
+│  └─ utils/                  # Contains any extra utility files
+│  │  └─ helpers.py           # Useful functions
+├─ .gitignore                 # Hides certain files
+├─ Discovery.md               # Defines app's space discovery page
+├─ LICENSE                    # License
+├─ README.md                  # Defines this README page
+├─ Spacefile                  # Space app configuration
+├─ example.env                # Example of an .env file
+└─ requirements.txt           # Library dependencies
+```
 
 ## Requirements
 - **Discord Application:** Create an app for **FREE** at [Discord Developer Portal](https://discord.com/developers/applications).
@@ -55,10 +81,15 @@ This is because `$space push`-ing each time would make development take forever.
 1. Clone this repository.
 2. Install the [Space CLI](https://deta.space/docs/en/basics/cli).
 3. Make sure you're in the project folder: `$cd <folder>`
-4. Rename `example.env` to `.env` file and update its contents.
+4. Install the library dependencies.
+    1. Make a virtual environment: `$python -m venv venv`
+    2. Enter the virtual environment: `$source venv/bin/activate`
+    3. Install requirements: `$pip install -r requirements.txt`
+    4. To leave the virtual environment later run `$deactivate`. 
+5. Rename `example.env` to `.env` file and update its contents.
     - Environment variables in comments are optional.
-5. Run `$space dev` to start both `main` and `bot` micros.
-6. In another terminal, start a reverse proxy/tunnel because your `https://localhost` can't be accessed by Discord.  
+6. Run `$space dev` to start both `main` and `bot` micros.
+7. In another terminal, start a reverse proxy/tunnel because your `https://localhost` can't be accessed by Discord.  
     - **Via [Deta Space](https://deta.space)**: 
         - Run `space reverse proxy` and the URL is your micro's URL: `https://<name>-1-a1234567.deta.app`
         - If you have a main bot and a test bot, use `space link` to switch to a test space app.
@@ -74,13 +105,14 @@ This is because `$space push`-ing each time would make development take forever.
         - Use this for development only if you need a higher request ratelimit.
      - **List of [other solutions](https://github.com/anderspitman/awesome-tunneling)**.
      - For all the above, you can do `CTRL+C` to stop them.
-7. Set the  `Interactions Endpoint URL` to `<url>/bot/interactions`.
+8. Set the  `Interactions Endpoint URL` to `<url>/bot/interactions`.
     - This is located in: `https://discord.com/developers/applications/{application_id}/information`
     - The URL is from the previous step, for space it's this: `https://<name>-1-a1234567.deta.app`
-8. Finally you can now start live editing.  
+9. Finally you can now start live editing.  
    Uvicorn is set to `--reload` so any edits you make automatically restarts the webserver.
-9. To stop running do `CTRL+C`.
-10. When you're ready, run `$space push` to update the space app.
+10. To stop running do `CTRL+C`.
+
+When you're ready, you can run `$space push` to update the space app.
 
 ## Resources
 - **Deta Space Documentation:** https://deta.space/docs
