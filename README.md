@@ -10,7 +10,7 @@ You can also treat this repository as a template for making serverless bots with
 - [Requirements](#requirements)
 - [Running Online](#running-online)
 - [Running Locally](#running-locally)
-- [Links and Resources](#resources)
+- [Links and Resources](#links-and-resources)
 
 ## Features
 - `/ping` - a simple command that tells you the bot's latency.
@@ -114,7 +114,7 @@ This is because `$space push`-ing each time would make development take forever.
 
 When you're ready, you can run `$space push` to update the space app.
 
-## Resources
+## Links and Resources
 - **Deta Space Documentation:** https://deta.space/docs
 - **Deta Discord:** https://discord.gg/deta
 - **Discohook Discord:** https://discord.gg/xEEpJvE9py
