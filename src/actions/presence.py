@@ -3,7 +3,7 @@ import datetime
 import logging
 import asyncio
 import deta # https://github.com/jnsougata/deta
-import discohook # https://github.com/jnsougata/deta
+import discohook # https://github.com/jnsougata/discohook
 
 activity_name = '/ask! | OpenAI'
 activity_type = 2 # listening to, https://discord.com/developers/docs/topics/gateway-events#activity-object
