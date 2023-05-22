@@ -7,6 +7,8 @@ git: "https://github.com/imptype/serverless-chatgpt-discord-bot"
 homepage: "https://deta.space"
 ---
 
+With this, you can run your own instance of a ChatGPT Discord bot.
+
 ### Installation steps:
 1. First install the app.
 2. Enter the required environment variables:
