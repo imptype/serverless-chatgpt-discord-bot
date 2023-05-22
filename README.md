@@ -56,9 +56,9 @@ You can also treat this repository as a template for making serverless bots with
 - [**openai**](https://pypi.org/project/openai/): A PyPI library used to make async [OpenAI API](https://platform.openai.com/docs/api-reference?lang=python) requests.
 
 ## Running Online
-1. Install the space app from the app's discovery page.  
+1. Install the space app from the [app's discovery page](https://deta.space/discovery/@imp1/chatgpt).  
    Alternatively you could build the space app yourself:
-   1. Clone this repository.
+   1. [Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) this repository.
    2. Install the [Space CLI](https://deta.space/docs/en/basics/cli).
    3. Make sure you're in the project folder: `$cd <folder>`
    4. Create a space app: `$space new`
@@ -78,7 +78,7 @@ You can also treat this repository as a template for making serverless bots with
 ## Running Locally
 You only need to run the bot locally if you plan to **develop new commands** for the bot.    
 This is because `$space push`-ing each time would make development take forever.
-1. Clone this repository.
+1. [Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) this repository.
 2. Install the [Space CLI](https://deta.space/docs/en/basics/cli).
 3. Make sure you're in the project folder: `$cd <folder>`
 4. Install the library dependencies.
@@ -120,4 +120,4 @@ When you're ready, you can run `$space push` to update the space app.
 - **Discohook Discord:** https://discord.gg/xEEpJvE9py
 - **Discord API Documentation:** https://discord.com/developers/docs
 - **OpenAI API Documenation:** https://platform.openai.com/docs/api-reference?lang=python
-- **Space App Discovery Page:** `placeholder`
+- **Space App Discovery Page:** https://deta.space/discovery/@imp1/chatgpt
