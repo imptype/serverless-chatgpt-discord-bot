@@ -7,9 +7,8 @@ You can also treat this repository as a template for making serverless bots with
 - [Table of Contents](#table-of-contents)
 - [Features](#features)
 - [Requirements](#requirements)
-- [Running](#running)
-  - [Running Locally](#running-locally)
-  - [Running Online](#running-online)
+- [Running Online](#running-online)
+- [Running Locally](#running-locally)
 - [Links and Resources](#resources)
 
 ## Features
@@ -30,16 +29,36 @@ You can also treat this repository as a template for making serverless bots with
   - This is only used when developing the bot locally.
 - [**openai**](https://pypi.org/project/openai/): A PyPI library used to make async [OpenAI API](https://platform.openai.com/docs/api-reference?lang=python) requests.
 
+## Running Online
+1. Install the space app from the app's discovery page.  
+   Alternatively you could build the space app yourself:
+   1. Clone this repository.
+   2. Install the [Space CLI](https://deta.space/docs/en/basics/cli).
+   3. Make sure you're in the project folder: `$cd <folder>`
+   4. Create a space app: `$space new`
+   5. Push the space app: `$space push`
+2. Enter the environment variables (Space App Settings ➔ Configuration).
+    - `DISCORD_APPLICATION_ID` - Your discord app's ID.
+    - `DISCORD_PUBLIC_KEY` - Your discord app's public key.
+    - `DISCORD_BOT_TOKEN` - Your bot's token.
+    - `OPENAI_API_KEY` - An API key from OpenAI's API.
+    - Other environment variables are optional.
+3. Set `Interactions Endpoint URL` to `<micro_url>/bot/interactions`.
+    - This is located in: `https://discord.com/developers/applications/{application_id}/information`
+    - A Micro URL looks like this: `https://chatgpt-1-a1234567.deta.app/`
+4. Visit `<micro_url>/bot/api/dash/<discord_bot_token>` to register the slash commands for the first time.
+5. Run `/ping` to make sure it's working! Enjoy!
+
 # --- Everything below is WIP ---
 
-## Running
-
-### Running Online
-2 ways
-1. install on space app, see `Discovery.md` for now.
-2. push yourself
-
-### Running Locally
+## Running Locally
+You may want to run the bot locally when it comes to making new commands otherwise you'd have `space push` each time and that would make development take forever.
+1. Clone this repository.
+2. Install the [Space CLI](https://deta.space/docs/en/basics/cli).
+3. Make sure you're in the project folder: `$cd <folder>`
+4. Run `space dev` to run both `main` and `bot` micros.
+  1. Do `CTRL+C` to stop running.
+5. Set up a reverse proxy to forward local host
 - for testing purposes
 - to build new commands
 - faster
