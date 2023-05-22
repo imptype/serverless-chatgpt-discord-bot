@@ -1,13 +1,11 @@
 ---
 app_name: "ChatGPT"
 title: "Serverless ChatGPT Discord Bot"
-tagline: "Run a ChatGPT Discord Bot in the cloud: private, secure & always online."
+tagline: "Your personal ChatGPT Discord bot."
 theme_color: "#74aa9c"
 git: "https://github.com/imptype/serverless-chatgpt-discord-bot"
 homepage: "https://deta.space"
 ---
-
-Your personal ChatGPT Discord bot.
 
 ### Installation steps:
 1. First install the app.
