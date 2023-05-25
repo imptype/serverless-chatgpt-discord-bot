@@ -95,11 +95,11 @@ This is because `$space push`-ing each time would make development take forever.
         - If you have a main bot and a test bot, use `space link` to switch to a test space app.
     - **Via [Ngrok](https://ngrok.com)**:
         - [Setup Ngrok](https://ngrok.com/docs/getting-started). Create an account, install CLI, set auth-token.
-        - Run `ngrok http 8000` to get a URL like `https://a1b2-34-567-890-123.ngrok-free.app`.
+        - Run `ngrok http 4200` to get a URL like `https://a1b2-34-567-890-123.ngrok-free.app`.
         - Note the Free Tier has a ratelimit of 60 requests per minute and URLs are ephemeral.
      - **Via [Cloudflare](https://cloudflare.com)**:
         - [Setup Cloudflare](https://developers.cloudflare.com/pages/how-to/preview-with-cloudflare-tunnel). Install CLI and optionally link an account.
-        - Run `cloudflared tunnel --url https://localhost:8000` to get a URL like `https://ab-quick-brown-fox.trycloudflare.com`.
+        - Run `cloudflared tunnel --url https://localhost:4200` to get a URL like `https://ab-quick-brown-fox.trycloudflare.com`.
         - No request ratelimit (AFAIK) but URLs are still ephemeral.
         - Note it's technically against their ToS to host anything other than basic HTML pages on the free plan. 
         - Use this for development only if you need a higher request ratelimit.
