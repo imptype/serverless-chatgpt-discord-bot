@@ -6,7 +6,7 @@ from ..utils.helpers import chunks
 openai.api_key = os.getenv('OPENAI_API_KEY')
 system_content = os.getenv('CHATGPT_SYSTEM_MESSAGE')
 
-models = ['gpt-3.5', 'gpt-3.5-turbo']
+models = ['gpt-3.5-turbo-0301', 'gpt-3.5-turbo']
 
 options = [
   discohook.StringOption('prompt', 'Type your question here.', required = True),
