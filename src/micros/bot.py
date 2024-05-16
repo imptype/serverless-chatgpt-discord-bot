@@ -35,9 +35,9 @@ app.router.lifespan_context = lifespan
 @app.on_error
 async def on_error(interaction, error):
   if interaction.responded:
-    await interaction.followup('Sorry, an error has occured (after responding).')
+    await interaction.followup('Sorry, an error has occurred (after responding).')
   else:
-    await interaction.response('Sorry, an error has occured.')
+    await interaction.response('Sorry, an error has occurred.')
   await log_error(app.session, error)
 
 # Add commands
