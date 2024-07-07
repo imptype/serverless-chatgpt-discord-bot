@@ -1,6 +1,6 @@
 ---
 app_name: "ChatGPT"
-title: "Serverless ChatGPT Discord Bot"
+title: "ChatGPT Serverless Discord Bot"
 tagline: "Your personal ChatGPT Discord bot."
 theme_color: "#74aa9c"
 git: "https://github.com/imptype/serverless-chatgpt-discord-bot"

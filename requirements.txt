@@ -1,5 +1,5 @@
-git+https://github.com/jnsougata/discohook@0.0.5a298+gaac0bb5
-git+https://github.com/jnsougata/deta@0.0.7
+git+https://github.com/jnsougata/discohook@bd888d3
+git+https://github.com/jnsougata/deta@eb0a09f
 uvicorn==0.22.0
 openai==0.27.7
 python-dotenv==1.0.0
