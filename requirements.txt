@@ -1,4 +1,4 @@
-git+https://github.com/jnsougata/discohook@aac0bb5
+git+https://github.com/jnsougata/discohook@ebdf09a
 git+https://github.com/jnsougata/deta@eb0a09f
 uvicorn==0.22.0
 openai==0.27.7

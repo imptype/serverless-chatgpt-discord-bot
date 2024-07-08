@@ -9,19 +9,19 @@ system_content = os.getenv('CHATGPT_SYSTEM_MESSAGE')
 models = ['gpt-3.5-turbo-0301', 'gpt-3.5-turbo']
 
 options = [
-  discohook.StringOption('prompt', 'Type your question here.', required = True),
-  discohook.StringOption('model', 'The AI model to use.', choices = [
+  discohook.Option.string('prompt', 'Type your question here.', required = True),
+  discohook.Option.string('model', 'The AI model to use.', choices = [
     discohook.Choice(model.replace('.', '-'), model) for model in models # . not allowed in name
   ])
 ]
 
-@discohook.command('ask', 'Ask ChatGPT anything!', options = options)
+@discohook.command.slash('ask', description = 'Ask ChatGPT anything!', options = options)
 async def ask_command(interaction, prompt, model):
 
-  await interaction.defer() # because it takes more than 3 seconds!
+  await interaction.response.defer() # because it takes more than 3 seconds!
 
   if (await openai.Moderation.acreate(prompt)).results[0].flagged:
-    return await interaction.response('Sorry, your prompt was flagged.')
+    return await interaction.response.followup('Sorry, your prompt was flagged.')
 
   if not model:
     model = models[-1] 
@@ -37,4 +37,4 @@ async def ask_command(interaction, prompt, model):
   text = completion.choices[0].message.content
 
   for text in chunks(text, 2000)[:10]:
-    await interaction.followup(text)
+    await interaction.response.followup(text)

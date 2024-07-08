@@ -16,8 +16,9 @@ With this, you can run your own instance of a ChatGPT Discord bot.
     - `DISCORD_PUBLIC_KEY` - Your discord app's public key.
     - `DISCORD_BOT_TOKEN` - Your bot's token.
     - `OPENAI_API_KEY` - An API key from OpenAI's API.
+    - `SYNC_PASSWORD` - A password you set to sync commands.
 3. You can overwrite `CHATGPT_SYSTEM_MESSAGE` to anything you want to transform ChatGPT's personality.
 4. Set the `Interactions Endpoint URL` in your discord app's general information to `<micro_url>/bot/interactions`.
-5. Visit `<micro_url>/bot/api/dash/<token>` to register the slash commands for the first time.
+5. Visit `<micro_url>/bot/api/dash` to register the slash commands for the first time.
 
 Run `/ping` to make sure it's working! Enjoy!
