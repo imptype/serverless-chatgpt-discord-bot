@@ -29,17 +29,16 @@ You can also treat this repository as a template for making serverless bots with
 │  ├─ commands/               # All command files
 │  │  ├─ ask.py               # Ask command
 │  │  └─ ping.py              # Ping command
-│  ├─ micros/                 # Micro files; each file is a micro
-│  │  ├─ bot.py               # /bot route, contains the discohook bot
-│  │  └─ main.py              # / route, contains the actions handler
-│  └─ utils/                  # Contains any extra utility files
-│     └─ helpers.py           # Useful functions
+│  ├─ utils/                  # Contains any extra utility files
+│  │  └─ helpers.py           # Useful functions
+│  └─ bot.py                  # Contains the discohook bot
 ├─ .gitignore                 # Hides certain files
 ├─ Discovery.md               # Defines app's space discovery page
 ├─ LICENSE                    # License
 ├─ README.md                  # Defines this README page
 ├─ Spacefile                  # Space app configuration
 ├─ example.env                # Example of an .env file
+├─ main.py                    # Entry point
 └─ requirements.txt           # Library dependencies
 ```
 
