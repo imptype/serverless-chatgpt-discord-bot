@@ -33,7 +33,7 @@ You can also treat this repository as a template for making serverless bots with
 │  │  ├─ bot.py               # /bot route, contains the discohook bot
 │  │  └─ main.py              # / route, contains the actions handler
 │  └─ utils/                  # Contains any extra utility files
-│  │  └─ helpers.py           # Useful functions
+│     └─ helpers.py           # Useful functions
 ├─ .gitignore                 # Hides certain files
 ├─ Discovery.md               # Defines app's space discovery page
 ├─ LICENSE                    # License
