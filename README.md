@@ -69,10 +69,10 @@ You can also treat this repository as a template for making serverless bots with
     - `OPENAI_API_KEY` - An API key from OpenAI's API.
     - `SYNC_PASSWORD` - A password you set to sync commands later on.
     - Other environment variables are optional.
-3. Set `Interactions Endpoint URL` to `<micro_url>/bot/interactions`.
+3. Set `Interactions Endpoint URL` to `<micro_url>/interactions`.
     - This is located in: `https://discord.com/developers/applications/{application_id}/information`
     - A Micro URL looks like this: `https://chatgpt-1-a1234567.deta.app`
-4. Visit `<micro_url>/bot/api/dash` to register the slash commands for the first time.
+4. Visit `<micro_url>/api/dash` to register the slash commands for the first time.
     - You need to type the value of `SYNC_PASSWORD` you set in your env vars.
 5. Run `/ping` to make sure it's working! Enjoy!
 
@@ -106,7 +106,7 @@ This is because `$space push`-ing each time would make development take forever.
         - Use this for development only if you need a higher request ratelimit.
      - **List of [other solutions](https://github.com/anderspitman/awesome-tunneling)**.
      - For all the above, you can do `CTRL+C` to stop them.
-8. Set the  `Interactions Endpoint URL` to `<url>/bot/interactions`.
+8. Set the  `Interactions Endpoint URL` to `<url>/interactions`.
     - This is located in: `https://discord.com/developers/applications/{application_id}/information`
     - The URL is from the previous step, for space it's this: `https://<name>-1-a1234567.deta.app`
 9. Finally you can now start live editing.  
